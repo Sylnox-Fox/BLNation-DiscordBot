@@ -1,5 +1,6 @@
 Petit Bot discord pour les nations de badlands ^^
-en dépendance il faut node.js, npm et discord.js (`npm install discord.js`)
+Pour le fonctionnement il faudra que vous créez vorte bot discord et vous l'hébergez
+en dépendance il faut node.js, npm, dans le dossier du bot faire `npm init` et `npm install discord.js`
 Il faudra créer un fichier config.json ressemblant à ceci:
 ```json
 {
