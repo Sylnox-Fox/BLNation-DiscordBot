@@ -38,6 +38,7 @@ module.exports = {
                 .addFields(
                     { name: 'Quantité donnée:', value: '0', inline: true},
                     { name: 'Quantité demandée:', value: (interaction.fields.getTextInputValue('quantityInput')).replace(/ /g, ''), inline: true},
+                    { name: 'Quantité manquante:', value: (interaction.fields.getTextInputValue('quantityInput')).replace(/ /g, ''), inline: false},
                 )
                 .setThumbnail(interaction.fields.getTextInputValue('blockItemPictureInput'));
             

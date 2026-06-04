@@ -7,7 +7,7 @@ module.exports = {
         if (interaction.customId !== 'addBlockItem') return;
         if (isNaN(interaction.fields.getTextInputValue('blockItemGiven'))) {
             await interaction.reply({
-                            content: "La quantité donnée n'est pas un nombre.",
+                            content: "La quantité donnée     n'est pas un nombre.",
                             flags: MessageFlags.Ephemeral
                         });
             return;
@@ -34,6 +34,7 @@ module.exports = {
         }
         else {
             questEmbed.data.fields[0].value = totalAdded;
+            questEmbed.data.fields[2].value = amountNeeded - totalAdded;
 
             const thread = message.thread;
             if (thread) {

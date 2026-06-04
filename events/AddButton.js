@@ -10,7 +10,7 @@ module.exports = {
             const blockItemGiven = new TextInputBuilder()
 			.setCustomId('blockItemGiven')
 			.setStyle(TextInputStyle.Short)
-			.setPlaceholder('69 420');
+			.setPlaceholder('69420');
 
 			const blockItemGivenLabel = new LabelBuilder()
 			.setLabel('Quantité total donnée')
