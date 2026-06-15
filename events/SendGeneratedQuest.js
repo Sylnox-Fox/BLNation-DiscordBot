@@ -47,10 +47,10 @@ module.exports = {
             const add = new ButtonBuilder().setCustomId('add').setLabel('Ajouter blocs/items').setStyle(ButtonStyle.Primary);
             const row = new ActionRowBuilder().addComponents(add);
 		    
-            const message = await interaction.reply({ embeds: [questEmbed], components: [row], fetchReply: true });
+            await interaction.reply({ embeds: [questEmbed], components: [row], withResponse: true });
 
-            
             // Créer thread
+            const message = await interaction.fetchReply();            
             await message.startThread({
                 name: `${interaction.fields.getTextInputValue('blockItemInput')}`,
                 autoArchiveDuration: 1440, // 24h
